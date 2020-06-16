@@ -19,5 +19,10 @@ class PagesController < ApplicationController
     def test_after
       puts "after ran"
     end
+
+    def pages_params 
+    #it's a strong param
+        params.require(:user).permit(:status, :id)
+    end
 end      
      
